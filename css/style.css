@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --beige: #fff7ed;
+  --blue: #5f9ea0;
+  --white: #ffffff;
+  --dark-brown: #512f0e;
+  --dark-blue: #416f70;
+  --blue-shadow: #5f9ea0a9;
+  --light-tra-blue: #9ab3b44c;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: var(--beige);
+}
+.adding-items {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  margin-left: 30%;
+  margin-top: 30px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: var(--white);
+}
+
+.texts {
+  font-size: 20px;
+  width: fit-content;
+  height: fit-content;
+  margin: 15px;
+  padding: 15px;
+  font-weight: bold;
+}
+input {
+  text-align: right;
+}
+.inputs,
+.btns {
+  border-radius: 5px;
+  border: solid var(--blue) 3px;
+  align-content: center;
+}
+
+.btns {
+  background-color: var(--blue);
+  color: var(--white);
+  border-width: 0;
+  width: 130px;
+  height: fit-content;
+}
+
+.btns:hover {
+  background-color: var(--dark-blue);
+}
+
+header,
+footer {
+  font-size: 20px;
+  margin: 0;
+  padding: 15px;
+  width: 100%;
+  height: fit-content;
+  background-color: var(--blue);
+  align-content: center;
+  justify-content: space-between;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header-links,
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-links a,
+.footer-links a,
+header,
+footer {
+  color: var(--white);
+}
+footer {
+  margin-top: auto;
+}
+
+.header-links a,
+.footer-links a {
+  margin: 10px;
+  font-weight: bold;
+}
+
+.header-links a:hover,
+.footer-links a:hover {
+  color: var(--dark-brown);
+}
+
+footer p {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.tasks-list-container {
+  margin: 15px 20px 15px; /* 150 تتغير عند الحجم الصغير للشاشة */
+  display: flex;
+  flex-direction: column;
+}
+
+.tasks-list {
+  list-style-type: none;
+  padding: 15px;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tasks-list li {
+  background-color: var(--white);
+  box-shadow: var(--blue-shadow) -7px 7px 7px;
+  margin: 15px;
+  padding: 15px;
+  min-width: 170px;
+  max-width: min-content;
+  height: 180px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.tasks-list li:hover {
+  background-color: var(--light-tra-blue);
+}
