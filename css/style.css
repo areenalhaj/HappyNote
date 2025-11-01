@@ -142,3 +142,7 @@ footer p {
 .tasks-list li:hover {
   background-color: var(--light-tra-blue);
 }
+
+.container-page2 {
+  text-align: center;
+}

@@ -1,3 +1,5 @@
+<!-- مشكلة حجم النص في النوت الكبيرة
+ مشكلة ضيق مساحة ادخال النص -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +14,7 @@
   <header>
     <h1>Happy Note 😊</h1>
     <apan class="header-links">
-      <a href=".">Scores</a>
+      <a href="index2.html">Top names</a>
       <a href=".">Acheivements</a>
       <a href=".">Help</a>
     </apan>
@@ -23,12 +25,15 @@
       <label class="texts" for="new-task">ADD a new note: </label>
       <input class="texts inputs" id="new-task" type="text" value="" name="add-new-task-field">
     </div>
-    <button class="btns texts add-btn" id="add-btn" type="button">ADD</button>
+    <div>
+      <button class="btns texts delete-btn" id="delete-btn" type="button">DELETE</button>
+      <button class="btns texts add-btn" id="add-btn" type="button">ADD</button>
+    </div>
   </div>
 
   <div class="tasks-list-container">
     <h2 class="todotasks-title">My Notes:</h2>
-    <ul class="tasks-list ">
+    <ul class="tasks-list">
     </ul>
   </div>
 
