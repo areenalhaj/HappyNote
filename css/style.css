@@ -29,15 +29,17 @@ body {
 }
 
 .adding-items {
-  margin-top: 30px;
+  background-color: var(--white);
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
-  max-width: 600px;
-  text-align: center;
   justify-content: space-between;
   align-items: center;
-  border-radius: 5px;
-  background-color: var(--white);
+  text-align: center;
+  max-width: 600px;
+  height: 220px;
+  padding: 15px;
+  margin-top: 30px;
 }
 
 .texts {
@@ -46,7 +48,6 @@ body {
   height: fit-content;
   margin: 15px;
   padding: 15px;
-  font-weight: bold;
 }
 input {
   text-align: right;
@@ -72,30 +73,33 @@ input {
 
 header,
 footer {
-  font-size: 20px;
   margin: 0;
   padding: 15px;
   width: 100%;
   height: fit-content;
   background-color: var(--blue);
-  align-content: center;
   justify-content: space-between;
   display: flex;
+  align-items: center;
 }
-
+/* header > * {
+  margin-top: 5px;
+  padding-top: 5px;
+} */
 a {
   text-decoration: none;
 }
 
 .header-links,
-.footer-links {
+.footer-items {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 15px;
 }
 
 .header-links a,
-.footer-links a,
+.footer-items p,
 header,
 footer {
   color: var(--white);
@@ -104,47 +108,39 @@ footer {
   margin-top: auto;
 }
 
-.header-links a,
-.footer-links a {
-  /* margin: 10px; */
-  font-weight: bold;
-}
-
-.header-links a:hover,
-.footer-links a:hover {
+.header-links a:hover {
   color: var(--dark-brown);
 }
 
-footer p {
-  font-weight: bold;
-  font-size: 30px;
-}
-
 .tasks-list-container {
-  margin: 15px 20px 15px; /* 150 تتغير عند الحجم الصغير للشاشة */
+  margin: 10px 20px 10px;
   display: flex;
   flex-direction: column;
 }
 
 .tasks-list {
   list-style-type: none;
-  padding: 15px;
+  margin-block: 15px;
   width: fit-content;
   height: fit-content;
   display: flex;
   flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
 }
 
 .tasks-list li {
   background-color: var(--white);
   box-shadow: var(--blue-shadow) -7px 7px 7px;
-  margin: 15px;
-  padding: 15px;
-  min-width: 170px;
-  max-width: min-content;
+  padding-block: 65px;
+  padding-inline: 10px;
+  width: 180px;
   height: 180px;
-  border-radius: 5px;
+  border-radius: 0 50px;
   text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .tasks-list li:hover {
@@ -155,10 +151,19 @@ footer p {
   text-align: center;
 }
 
-@media (max-width: 680px) {
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+@media (max-width: 480px) {
   .adding-items {
     flex-wrap: wrap;
-    width: 240px;
+    width: 250px;
+    height: 200px;
   }
   .texts,
   .inputs,
@@ -167,14 +172,43 @@ footer p {
     padding: 7px;
     margin: 7px;
   }
-  h1,
+  h1 {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 14px;
+  }
+  .header-links,
+  .footer-items {
+    font-size: 10px;
+    gap: 5px;
+  }
+}
+@media (max-width: 680px) and (min-width: 480px) {
+  .adding-items {
+    flex-wrap: wrap;
+    width: 400px;
+    height: 150px;
+  }
+  .texts,
+  .inputs,
+  .btns {
+    font-size: 14px;
+    padding: 7px;
+    margin: 7px;
+  }
+  h1 {
+    font-size: 20px;
+  }
   h2 {
     font-size: 16px;
   }
-
+  .tasks-list {
+  }
   .header-links,
-  .footer-links {
-    font-size: 7px;
+  .footer-items {
+    font-size: 12px;
     gap: 5px;
   }
 }
