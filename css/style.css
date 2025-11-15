@@ -157,7 +157,7 @@ footer p {
 @media (max-width: 680px) {
   .adding-items {
     flex-wrap: wrap;
-    width: 400px;
+    width: 290px;
   }
   .texts {
     font-size: 16px;
