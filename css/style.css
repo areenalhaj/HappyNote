@@ -158,7 +158,7 @@ footer p {
 @media (max-width: 680px) {
   .adding-items {
     flex-wrap: wrap;
-    width: 290px;
+    width: 240px;
   }
   .texts,
   .inputs,
