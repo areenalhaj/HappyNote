@@ -29,11 +29,11 @@ body {
 }
 
 .adding-items {
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   max-width: 600px;
   text-align: center;
-  margin-top: 30px;
   justify-content: space-between;
   align-items: center;
   border-radius: 5px;
@@ -91,6 +91,7 @@ a {
 .footer-links {
   display: flex;
   justify-content: space-between;
+  gap: 15px;
 }
 
 .header-links a,
@@ -105,7 +106,7 @@ footer {
 
 .header-links a,
 .footer-links a {
-  margin: 10px;
+  /* margin: 10px; */
   font-weight: bold;
 }
 
@@ -159,7 +160,21 @@ footer p {
     flex-wrap: wrap;
     width: 290px;
   }
-  .texts {
+  .texts,
+  .inputs,
+  .btns {
+    font-size: 12px;
+    padding: 7px;
+    margin: 7px;
+  }
+  h1,
+  h2 {
     font-size: 16px;
+  }
+
+  .header-links,
+  .footer-links {
+    font-size: 7px;
+    gap: 5px;
   }
 }
