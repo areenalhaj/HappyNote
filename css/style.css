@@ -5,12 +5,12 @@
 }
 
 :root {
-  --beige: #fff7ed;
+  --beige: #f0e5d8;
   --blue: #5f9ea0;
   --white: #ffffff;
   --dark-brown: #512f0e;
   --dark-blue: #416f70;
-  --blue-shadow: #5f9ea0a9;
+  --blue-shadow: #335e60ad;
   --light-tra-blue: #9ab3b44c;
 }
 
@@ -30,7 +30,9 @@ body {
 
 .adding-items {
   background-color: var(--white);
-  border-radius: 5px;
+  /* border-radius: 5px; */
+  border-radius: 90% 5% / 10% 70%;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -54,7 +56,9 @@ input {
 }
 .inputs,
 .btns {
-  border-radius: 5px;
+  /* border-radius: 5px; */
+  border-radius: 60% 10% / 16% 40%;
+
   border: solid var(--blue) 3px;
   align-content: center;
 }
@@ -71,6 +75,10 @@ input {
   background-color: var(--dark-blue);
 }
 
+li > .btns {
+  width: fit-content;
+  padding: 7px;
+}
 header,
 footer {
   margin: 0;
@@ -82,10 +90,7 @@ footer {
   display: flex;
   align-items: center;
 }
-/* header > * {
-  margin-top: 5px;
-  padding-top: 5px;
-} */
+
 a {
   text-decoration: none;
 }
@@ -125,22 +130,29 @@ footer {
   height: fit-content;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 15px;
   justify-content: flex-start;
 }
 
 .tasks-list li {
   background-color: var(--white);
   box-shadow: var(--blue-shadow) -7px 7px 7px;
-  padding-block: 65px;
+  padding-block: 10px;
   padding-inline: 10px;
   width: 180px;
   height: 180px;
-  border-radius: 0 50px;
+  border-radius: 60% 5% / 16% 100%;
+  /* for testing shape: */
+  /* border: 1px solid red; */
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .tasks-list li:hover {
@@ -178,6 +190,9 @@ h2 {
 
   h2 {
     font-size: 14px;
+  }
+  .tasks-list {
+    justify-content: center;
   }
   .header-links,
   .footer-items {
