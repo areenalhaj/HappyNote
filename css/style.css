@@ -102,6 +102,9 @@ a {
   align-items: center;
   gap: 15px;
 }
+.footer-items p {
+  width: fit-content;
+}
 
 .header-links a,
 .footer-items p,
