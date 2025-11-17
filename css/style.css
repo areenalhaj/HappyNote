@@ -114,6 +114,7 @@ footer {
 }
 footer {
   margin-top: auto;
+  margin-bottom: 0;
 }
 
 .header-links a:hover {
@@ -137,20 +138,30 @@ footer {
   justify-content: flex-start;
 }
 
+.tasks-list > li > .delete-btn {
+  float: left;
+  align-self: flex-start;
+}
+
 .tasks-list li {
   background-color: var(--white);
   box-shadow: var(--blue-shadow) -7px 7px 7px;
-  padding-block: 10px;
+  padding-bottom: 20px;
+  padding-top: 0px;
   padding-inline: 10px;
-  width: 180px;
-  height: 180px;
+  width: 220px;
+  height: fit-content;
+  max-height: 180px;
+
   border-radius: 60% 5% / 16% 100%;
   /* for testing shape: */
   /* border: 1px solid red; */
   text-align: center;
-  white-space: nowrap;
+  white-space: wrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  /* overflow-wrap: break-word; */
+  word-break: break-all;
 
   display: flex;
   flex-direction: column;
@@ -173,7 +184,7 @@ h1 {
 h2 {
   font-size: 22px;
 }
-
+/* mobile size: */
 @media (max-width: 480px) {
   .adding-items {
     flex-wrap: wrap;
@@ -197,12 +208,18 @@ h2 {
   .tasks-list {
     justify-content: center;
   }
+  .tasks-list li {
+    font-size: 10px;
+    width: 140px;
+    max-height: 120px;
+  }
   .header-links,
   .footer-items {
     font-size: 10px;
     gap: 5px;
   }
 }
+/* tablet size: */
 @media (max-width: 680px) and (min-width: 480px) {
   .adding-items {
     flex-wrap: wrap;
@@ -223,6 +240,11 @@ h2 {
     font-size: 16px;
   }
   .tasks-list {
+  }
+  .tasks-list li {
+    font-size: 12px;
+    width: 160px;
+    max-height: 140px;
   }
   .header-links,
   .footer-items {

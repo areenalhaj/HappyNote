@@ -2,7 +2,9 @@
 
 scores, emojies according to scores
 
-colors change -->
+colors change
+
+width and height max (fixed) and fit with content-->
 
 <!-- js old task code: -->
 
